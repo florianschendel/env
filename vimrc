@@ -55,7 +55,8 @@ set listchars=tab:›\ ,trail:•,extends:#,nbsp:.
 set number
 
 " Set status line display
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
+" set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [POS=%l,%v][%p%%]\ %{strftime('%c')}
 
 " Encoding
 set encoding=utf-8
@@ -80,4 +81,3 @@ vnoremap <Space> zf
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview"
 
-" TEST
