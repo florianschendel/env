@@ -13,6 +13,9 @@ filetype plugin indent on
 " Turn off modelines
 set modelines=0
 
+" Autoident
+set autoindent
+
 " Automatically wrap text that extends beyond the screen length.
 set wrap
 " Vim's auto indentation feature does not work properly with text copied from outside of Vim. Press the <F2> key to toggle paste mode on/off.
