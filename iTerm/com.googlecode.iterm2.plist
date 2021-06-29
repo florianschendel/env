@@ -765,6 +765,18 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
+	<key>Snippets</key>
+	<array>
+		<dict>
+			<key>guid</key>
+			<string>6FEC3CC3-8708-44C2-9102-711893C5905D</string>
+			<key>title</key>
+			<string>ls</string>
+			<key>value</key>
+			<string>ls -lah
+</string>
+		</dict>
+	</array>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>URLHandlersByGuid</key>
