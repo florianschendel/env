@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 while getopts d: flag
 do
@@ -15,12 +15,11 @@ temp=filelist.cache
 
 find "$md_directory" -name '*.md' -maxdepth 1 > $temp
 
-while read file
-do
+while read file; do
+    title=`echo ${file%.md}`
     file=`echo ${file%.md}`
-    IFS='/' array=($file)
-    echo "${array[${#array[@]}-1]}"
+    IFS='/' array=($title)
+    #pandoc --from markdown --to epub3 "$file.md" --output "$file.epub" --toc
     pandoc --from markdown --to epub3 "$file.md" --output "$file.epub" --toc --metadata title="${array[${#array[@]}-1]}"
-    echo $IFS
 done <  $temp
-rm $temp
+#rm $temp
