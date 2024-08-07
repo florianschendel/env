@@ -20,5 +20,6 @@ while read file; do
     basename "$titleName"
     title="$(basename -- $titleName)"
     pandoc --from markdown --to epub3 "$file.md" --output "$file.epub" --toc=true --metadata title=$title
+    pandoc --from markdown --to html5 "$file.md" --output "$file.html" -c style.css --ascii
 done <  $temp
 #rm $temp
